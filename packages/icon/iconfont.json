@@ -1,0 +1,23 @@
+{
+  "id": "3178423",
+  "name": "ui组件",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1625008",
+      "name": "icon_search",
+      "font_class": "icon_search",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    },
+    {
+      "icon_id": "16607264",
+      "name": "icon_arrow_down",
+      "font_class": "icon_arrow_down",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    }
+  ]
+}
