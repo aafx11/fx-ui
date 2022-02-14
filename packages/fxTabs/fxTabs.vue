@@ -58,13 +58,13 @@ export default {
     const navList = ref([])
     const init = () => {
       useSlots().default().map(item => {
-        console.log(item);
+
         navList.value.push({
           label: item.props.label,
           name: item.props.name,
           disabled:item.props.disabled
         })
-        console.log('获取',item.props.disabled);
+
       })
     }
 
@@ -84,8 +84,8 @@ export default {
       }
       activeKey.value = name;
 
-      context.emit('input', name);
-      context.emit('tab-click', e)
+      // context.emit('input', name);
+      context.emit('tab-click', e,name)
     }
 
 

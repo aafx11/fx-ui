@@ -27,12 +27,9 @@ export default {
     }
   },
   setup(props,context){
-    console.log('子组件',props.disabled);
+
     const activeKey = inject('act')
 
-    onBeforeMount(()=>{
-      context.emit('dis',props.disabled)
-    })
     return {
       activeKey
     }

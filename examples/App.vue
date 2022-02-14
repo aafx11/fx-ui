@@ -1,15 +1,6 @@
 <template>
-  <fx-tabs defaultKey="1" >
-    <fx-tab-pane label="选项1" name="1" >
-      <div>内容1</div>
-    </fx-tab-pane>
-    <fx-tab-pane label="选项2" name="2" disabled>
-      <div>内容2</div>
-    </fx-tab-pane>
-    <fx-tab-pane label="选项3" name="3">
-      <div>内容3</div>
-    </fx-tab-pane>
-  </fx-tabs>
+  <fx-skeleton type="1" rows="5" width="1000" active></fx-skeleton>
+
 </template>
 
 <script>
@@ -22,11 +13,15 @@ import FxSelector from "../packages/Selector/fxSelector";
 import {ref, watch} from "vue";
 import FxMagnifier from "../packages/magnifier/fxMagnifier";
 import FxTabPane from "../packages/fxTabs/fxTabPane";
+import FxToast from "../packages/fxToast/fxToast";
+import FxSkeleton from "../packages/fxSkeleton";
 
 
 export default {
   name: 'App',
   components: {
+    FxSkeleton,
+    FxToast,
     FxTabPane,
     FxMagnifier,
     FxSelector,
@@ -37,27 +32,16 @@ export default {
     FxButton,
   },
   setup(){
+    const test =(e,name)=>{
+      console.log(e);
+      console.log(name);
+    }
     return{
-
+      test
     }
   }
 }
 </script>
 
 <style>
-.test-button {
-
-}
-.container{
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.text {
-  /*width: 300px;*/
-}
-.title{
-  background-color: red;
-}
 </style>
