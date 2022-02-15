@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "649705",
+      "name": "删掉",
+      "font_class": "shandiao",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "5467569",
+      "name": "显示隐藏-01",
+      "font_class": "xianshiyincang-",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "5467577",
+      "name": "显示隐藏-02",
+      "font_class": "xianshiyincang-1",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
       "icon_id": "1625008",
       "name": "icon_search",
       "font_class": "icon_search",

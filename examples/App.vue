@@ -1,6 +1,11 @@
 <template>
-  <fx-skeleton type="1" rows="5" width="1000" active></fx-skeleton>
+  <div class="wrapper">
+    <fx-input placeholder="请输入" type="password" disabled></fx-input>
+    <fx-input v-model="user" clearable></fx-input>
+    <fx-input v-model="password" show-password type="password"></fx-input>
 
+    <button @click="test">123</button>
+  </div>
 </template>
 
 <script>
@@ -15,11 +20,13 @@ import FxMagnifier from "../packages/magnifier/fxMagnifier";
 import FxTabPane from "../packages/fxTabs/fxTabPane";
 import FxToast from "../packages/fxToast/fxToast";
 import FxSkeleton from "../packages/fxSkeleton";
+import FxInput from "../packages/fxInput";
 
 
 export default {
   name: 'App',
   components: {
+    FxInput,
     FxSkeleton,
     FxToast,
     FxTabPane,
@@ -31,12 +38,15 @@ export default {
     FxMenu,
     FxButton,
   },
-  setup(){
-    const test =(e,name)=>{
-      console.log(e);
-      console.log(name);
+  setup() {
+
+    const user = ref('123')
+    const password = ref('')
+    const test = () => {
+      console.log(user.value);
     }
-    return{
+    return {
+      user, password  ,
       test
     }
   }
@@ -44,4 +54,7 @@ export default {
 </script>
 
 <style>
+.wrapper {
+  width: 300px;
+}
 </style>
