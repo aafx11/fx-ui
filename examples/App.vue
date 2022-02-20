@@ -6,6 +6,34 @@
 
     <button @click="test">123</button>
   </div>
+  <div class="wrapper">
+    <fx-switch v-model="active"></fx-switch>
+    <fx-switch v-model="active" active-color="blue" inactive-color="red" name="sex"></fx-switch>
+
+  </div>
+  <div class="wrapper">
+    <fx-radio label="1" v-model="gender">男</fx-radio>
+    <fx-radio label="2" v-model="gender">女</fx-radio>
+    <button @click="show">11</button>
+  </div>
+  <div class="wrapper">
+    <fx-radio-group v-model="gender">
+      <fx-radio label="1" >男</fx-radio>
+      <fx-radio label="2" >女</fx-radio>
+    </fx-radio-group>
+        <fx-radio label="1" v-model="gender">男</fx-radio>
+        <fx-radio label="2" v-model="gender">女</fx-radio>
+  </div>
+
+  <div class="wrapper">
+    <fx-checkbox v-model="check" label="1">是否选中{{check}}</fx-checkbox>
+
+    <fx-checkbox-group v-model="list">
+      <fx-checkbox label="麦当劳"></fx-checkbox>
+      <fx-checkbox label="肯德基"></fx-checkbox>
+      <fx-checkbox label="汉堡王"></fx-checkbox>
+    </fx-checkbox-group>
+  </div>
 </template>
 
 <script>
@@ -21,11 +49,21 @@ import FxTabPane from "../packages/fxTabs/fxTabPane";
 import FxToast from "../packages/fxToast/fxToast";
 import FxSkeleton from "../packages/fxSkeleton";
 import FxInput from "../packages/fxInput";
+import FxSwitch from "../packages/fxSwitch";
+import FxRadio from "../packages/fxRadio";
+import FxRadioGroup from "../packages/fxRadioGroup";
+import FxCheckboxGroup from "../packages/fxCheckboxGroup";
+import FxCheckbox from "../packages/fxCheckbox";
 
 
 export default {
   name: 'App',
   components: {
+    FxCheckbox,
+    FxCheckboxGroup,
+    FxRadioGroup,
+    FxRadio,
+    FxSwitch,
     FxInput,
     FxSkeleton,
     FxToast,
@@ -42,12 +80,26 @@ export default {
 
     const user = ref('123')
     const password = ref('')
+
+
+    const active = ref(false)
     const test = () => {
-      console.log(user.value);
+      console.log(active.value);
     }
+
+    const gender = ref('1')
+    const show = () => {
+      console.log(gender.value);
+    }
+
+    const check = ref(false)
+
+    // const list = ref(['麦当劳','肯德基','汉堡王'])
+    const list = ref(['麦当劳','肯德基'])
+
     return {
-      user, password  ,
-      test
+      user, password, active, gender,check,list,
+      test,show
     }
   }
 }

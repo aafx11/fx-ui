@@ -6,6 +6,11 @@ import fxTabs from "./fxTabs/fxTabs.vue";
 import fxTabPane from "./fxTabs/fxTabPane.vue";
 import fxSkeleton from "./fxSkeleton.vue";
 import fxInput from "./fxInput.vue";
+import fxSwitch from "./fxSwitch.vue";
+import fxRadio from "./fxRadio.vue";
+import fxRadioGroup from "./fxRadioGroup.vue";
+import fxCheckbox from "./fxCheckbox.vue";
+import fxCheckboxGroup from "./fxCheckboxGroup.vue";
 //图标库
 import './icon/iconfont.css'
 import './icon/iconfont.js'
@@ -16,7 +21,8 @@ const list = [
     fxSelector,
     fxTabs,fxTabPane,
     fxSkeleton,
-    fxInput
+    fxInput, fxSwitch,fxRadio,fxRadioGroup,fxCheckbox,fxCheckboxGroup
+
 ]
 
 const install = function (Vue) {

@@ -1,6 +1,6 @@
 {
   "name": "aafxui",
-  "version": "0.1.21",
+  "version": "0.1.23",
   "private": false,
   "main": "dist/aafxui.umd.min.js",
   "author": {

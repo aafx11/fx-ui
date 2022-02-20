@@ -43,6 +43,7 @@ export default {
   setup(props) {
     let {type, size, disabled} = toRefs(props)
 
+
     return {
       type, size, disabled
     }
