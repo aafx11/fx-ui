@@ -1,19 +1,17 @@
 # fx-ui
 
-## Project setup
+## 在线预览
+https://aafx.com.cn/#/install
+
+## 安装
 ```
-npm install
+npm i --save aafxui
 ```
 
-### Compiles and hot-reloads for development
+## 引入
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+import 'aafxui/dist/aafxui.css' 
+import fxUI from 'aafxui'       
+.use(fxUI)
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

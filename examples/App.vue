@@ -101,6 +101,24 @@ export default {
       user, password, active, gender,check,list,
       test,show
     }
+  },
+  methods:{
+    print(){
+      console.log(123);
+    }
+  },
+  data(){
+    return{
+      a:1,
+    }
+  },
+  beforeCreate() {
+    console.log(this.a);
+
+  },
+  created() {
+    this.print()
+
   }
 }
 </script>
